@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.dao.BaseUserDao">
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.BaseUser">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="INTEGER"/>
+        <result column="height" property="height" jdbcType="INTEGER"/>
+    </resultMap>
+    <!--<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.example.demo.entity.BaseUser">-->
+        <!--SELECT *-->
+        <!--FROM base_user-->
+        <!--WHERE rui_zhi_user_id = #{ruiZhiUserId,jdbcType=BIGINT}-->
+    <!--</select>-->
+    <!--<delete id="deleteByPrimaryKey" parameterType="com.example.demo.entity.BaseUser">-->
+        <!--DELETE FROM base_user-->
+        <!--WHERE rui_zhi_user_id = #{ruiZhiUserId,jdbcType=BIGINT}-->
+    <!--</delete>-->
+    <!--<insert id="insert" parameterType="com.example.demo.entity.BaseUser">-->
+        <!--INSERT INTO base_user ( rui_zhi_user_id, -->
+          <!--user_role, login_name, password, -->
+          <!--user_full_name, user_no, teacher_or_student_id, -->
+          <!--teacher_rank, school_id, subject_id, -->
+          <!--entrance_school_year, gender, age, -->
+          <!--nation, address, create_time, -->
+          <!--update_time, remark )-->
+        <!--VALUES ( #{ruiZhiUserId,jdbcType=BIGINT}, -->
+          <!--#{userRole,jdbcType=TINYINT}, #{loginName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, -->
+          <!--#{userFullName,jdbcType=VARCHAR}, #{userNo,jdbcType=VARCHAR}, #{teacherOrStudentId,jdbcType=BIGINT}, -->
+          <!--#{teacherRank,jdbcType=VARCHAR}, #{schoolId,jdbcType=BIGINT}, #{subjectId,jdbcType=BIGINT}, -->
+          <!--#{entranceSchoolYear,jdbcType=VARCHAR}, #{gender,jdbcType=TINYINT}, #{age,jdbcType=INTEGER}, -->
+          <!--#{nation,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{createTime,jdbcType=BIGINT}, -->
+          <!--#{updateTime,jdbcType=BIGINT}, #{remark,jdbcType=VARCHAR} )-->
+    <!--</insert>-->
+    <!--<insert id="insertSelective" parameterType="com.example.demo.entity.BaseUser">-->
+        <!--INSERT INTO base_user-->
+        <!--<trim prefix="(" suffixOverrides="," suffix=")">-->
+                <!--rui_zhi_user_id,-->
+            <!--<if test="userRole != null">-->
+                <!--user_role,-->
+            <!--</if>-->
+            <!--<if test="loginName != null">-->
+                <!--login_name,-->
+            <!--</if>-->
+            <!--<if test="password != null">-->
+                <!--password,-->
+            <!--</if>-->
+            <!--<if test="userFullName != null">-->
+                <!--user_full_name,-->
+            <!--</if>-->
+            <!--<if test="userNo != null">-->
+                <!--user_no,-->
+            <!--</if>-->
+            <!--<if test="teacherOrStudentId != null">-->
+                <!--teacher_or_student_id,-->
+            <!--</if>-->
+            <!--<if test="teacherRank != null">-->
+                <!--teacher_rank,-->
+            <!--</if>-->
+            <!--<if test="schoolId != null">-->
+                <!--school_id,-->
+            <!--</if>-->
+            <!--<if test="subjectId != null">-->
+                <!--subject_id,-->
+            <!--</if>-->
+            <!--<if test="entranceSchoolYear != null">-->
+                <!--entrance_school_year,-->
+            <!--</if>-->
+            <!--<if test="gender != null">-->
+                <!--gender,-->
+            <!--</if>-->
+            <!--<if test="age != null">-->
+                <!--age,-->
+            <!--</if>-->
+            <!--<if test="nation != null">-->
+                <!--nation,-->
+            <!--</if>-->
+            <!--<if test="address != null">-->
+                <!--address,-->
+            <!--</if>-->
+            <!--<if test="createTime != null">-->
+                <!--create_time,-->
+            <!--</if>-->
+            <!--<if test="updateTime != null">-->
+                <!--update_time,-->
+            <!--</if>-->
+            <!--<if test="remark != null">-->
+                <!--remark,-->
+            <!--</if>-->
+        <!--</trim>-->
+        <!--VALUES-->
+        <!--<trim prefix="(" suffixOverrides="," suffix=")">-->
+                <!--#{ruiZhiUserId,jdbcType=BIGINT},-->
+            <!--<if test="userRole != null">-->
+                <!--#{userRole,jdbcType=TINYINT},-->
+            <!--</if>-->
+            <!--<if test="loginName != null">-->
+                <!--#{loginName,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="password != null">-->
+                <!--#{password,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userFullName != null">-->
+                <!--#{userFullName,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userNo != null">-->
+                <!--#{userNo,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="teacherOrStudentId != null">-->
+                <!--#{teacherOrStudentId,jdbcType=BIGINT},-->
+            <!--</if>-->
+            <!--<if test="teacherRank != null">-->
+                <!--#{teacherRank,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="schoolId != null">-->
+                <!--#{schoolId,jdbcType=BIGINT},-->
+            <!--</if>-->
+            <!--<if test="subjectId != null">-->
+                <!--#{subjectId,jdbcType=BIGINT},-->
+            <!--</if>-->
+            <!--<if test="entranceSchoolYear != null">-->
+                <!--#{entranceSchoolYear,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="gender != null">-->
+                <!--#{gender,jdbcType=TINYINT},-->
+            <!--</if>-->
+            <!--<if test="age != null">-->
+                <!--#{age,jdbcType=INTEGER},-->
+            <!--</if>-->
+            <!--<if test="nation != null">-->
+                <!--#{nation,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="address != null">-->
+                <!--#{address,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="createTime != null">-->
+                <!--#{createTime,jdbcType=BIGINT},-->
+            <!--</if>-->
+            <!--<if test="updateTime != null">-->
+                <!--#{updateTime,jdbcType=BIGINT},-->
+            <!--</if>-->
+            <!--<if test="remark != null">-->
+                <!--#{remark,jdbcType=VARCHAR},-->
+            <!--</if>-->
+        <!--</trim>-->
+    <!--</insert>-->
+    <!--<insert id="insertBatch" parameterType="java.util.List">-->
+        <!--INSERT INTO base_user ( rui_zhi_user_id, -->
+          <!--user_role, login_name, password, -->
+          <!--user_full_name, user_no, teacher_or_student_id, -->
+          <!--teacher_rank, school_id, subject_id, -->
+          <!--entrance_school_year, gender, age, -->
+          <!--nation, address, create_time, -->
+          <!--update_time, remark )-->
+        <!--VALUES-->
+        <!--<foreach collection="list" item="item" index="index" separator="," >-->
+            <!--(-->
+            <!--#{item.ruiZhiUserId,jdbcType=BIGINT}, -->
+            <!--#{item.userRole,jdbcType=TINYINT}, #{item.loginName,jdbcType=VARCHAR}, #{item.password,jdbcType=VARCHAR}, -->
+            <!--#{item.userFullName,jdbcType=VARCHAR}, #{item.userNo,jdbcType=VARCHAR}, #{item.teacherOrStudentId,jdbcType=BIGINT}, -->
+            <!--#{item.teacherRank,jdbcType=VARCHAR}, #{item.schoolId,jdbcType=BIGINT}, #{item.subjectId,jdbcType=BIGINT}, -->
+            <!--#{item.entranceSchoolYear,jdbcType=VARCHAR}, #{item.gender,jdbcType=TINYINT}, #{item.age,jdbcType=INTEGER}, -->
+            <!--#{item.nation,jdbcType=VARCHAR}, #{item.address,jdbcType=VARCHAR}, #{item.createTime,jdbcType=BIGINT}, -->
+            <!--#{item.updateTime,jdbcType=BIGINT}, #{item.remark,jdbcType=VARCHAR}-->
+            <!--)-->
+        <!--</foreach>-->
+    <!--</insert>-->
+    <!--<update id="updateByPrimaryKeySelective" parameterType="com.example.demo.entity.BaseUser">-->
+        <!--UPDATE base_user-->
+        <!--<set>-->
+            <!--<if test="userRole != null">-->
+                <!--user_role = #{userRole,jdbcType=TINYINT},-->
+            <!--</if>-->
+            <!--<if test="loginName != null">-->
+                <!--login_name = #{loginName,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="password != null">-->
+                <!--password = #{password,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userFullName != null">-->
+                <!--user_full_name = #{userFullName,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="userNo != null">-->
+                <!--user_no = #{userNo,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="teacherOrStudentId != null">-->
+                <!--teacher_or_student_id = #{teacherOrStudentId,jdbcType=BIGINT},-->
+            <!--</if>-->
+            <!--<if test="teacherRank != null">-->
+                <!--teacher_rank = #{teacherRank,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="schoolId != null">-->
+                <!--school_id = #{schoolId,jdbcType=BIGINT},-->
+            <!--</if>-->
+            <!--<if test="subjectId != null">-->
+                <!--subject_id = #{subjectId,jdbcType=BIGINT},-->
+            <!--</if>-->
+            <!--<if test="entranceSchoolYear != null">-->
+                <!--entrance_school_year = #{entranceSchoolYear,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="gender != null">-->
+                <!--gender = #{gender,jdbcType=TINYINT},-->
+            <!--</if>-->
+            <!--<if test="age != null">-->
+                <!--age = #{age,jdbcType=INTEGER},-->
+            <!--</if>-->
+            <!--<if test="nation != null">-->
+                <!--nation = #{nation,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="address != null">-->
+                <!--address = #{address,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="createTime != null">-->
+                <!--create_time = #{createTime,jdbcType=BIGINT},-->
+            <!--</if>-->
+            <!--<if test="updateTime != null">-->
+                <!--update_time = #{updateTime,jdbcType=BIGINT},-->
+            <!--</if>-->
+            <!--<if test="remark != null">-->
+                <!--remark = #{remark,jdbcType=VARCHAR},-->
+            <!--</if>-->
+        <!--</set>-->
+        <!--WHERE rui_zhi_user_id = #{ruiZhiUserId,jdbcType=BIGINT}-->
+    <!--</update>-->
+    <!--<update id="updateByPrimaryKey" parameterType="com.example.demo.entity.BaseUser">-->
+        <!--UPDATE base_user-->
+        <!--SET user_role = #{userRole,jdbcType=TINYINT},-->
+            <!--login_name = #{loginName,jdbcType=VARCHAR},-->
+            <!--password = #{password,jdbcType=VARCHAR},-->
+            <!--user_full_name = #{userFullName,jdbcType=VARCHAR},-->
+            <!--user_no = #{userNo,jdbcType=VARCHAR},-->
+            <!--teacher_or_student_id = #{teacherOrStudentId,jdbcType=BIGINT},-->
+            <!--teacher_rank = #{teacherRank,jdbcType=VARCHAR},-->
+            <!--school_id = #{schoolId,jdbcType=BIGINT},-->
+            <!--subject_id = #{subjectId,jdbcType=BIGINT},-->
+            <!--entrance_school_year = #{entranceSchoolYear,jdbcType=VARCHAR},-->
+            <!--gender = #{gender,jdbcType=TINYINT},-->
+            <!--age = #{age,jdbcType=INTEGER},-->
+            <!--nation = #{nation,jdbcType=VARCHAR},-->
+            <!--address = #{address,jdbcType=VARCHAR},-->
+            <!--create_time = #{createTime,jdbcType=BIGINT},-->
+            <!--update_time = #{updateTime,jdbcType=BIGINT},-->
+            <!--remark = #{remark,jdbcType=VARCHAR}-->
+        <!--WHERE rui_zhi_user_id = #{ruiZhiUserId,jdbcType=BIGINT}-->
+    <!--</update>-->
+</mapper>
